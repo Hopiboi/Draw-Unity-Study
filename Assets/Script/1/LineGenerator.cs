@@ -17,14 +17,12 @@ public class LineGenerator : MonoBehaviour
         {
             GameObject newLine = Instantiate(linePrefab);
             activeLine = newLine.GetComponent<Line>();
-            Debug.Log("Happy");
         }
 
         //not to draw when release
         if (Input.GetMouseButtonUp(0))
         {
             activeLine = null;
-            Debug.Log("sad");
         }
 
         if (activeLine != null)
