@@ -22,7 +22,7 @@ public class Liner : MonoBehaviour
     public void SetPosition(Vector2 pos)
     {
 
-        if (!CanAppend(pos))
+        if (!CanDraw(pos))
         {
             return;
         }
@@ -41,7 +41,7 @@ public class Liner : MonoBehaviour
     }
 
     //if the new point can be added
-    private bool CanAppend(Vector2 pos)
+    private bool CanDraw(Vector2 pos)
     {
         //first point always say yes
         if(_renderer.positionCount == 0)
@@ -51,7 +51,7 @@ public class Liner : MonoBehaviour
         }
 
         //newpoint or create continous point
-        return Vector2.Distance(_renderer.GetPosition(_renderer.positionCount - 1), pos) > DrawManager.RESOLUTION;
+        return Vector2.Distance(_renderer.GetPosition(_renderer.positionCount - 1), pos) > DrawManager.minDistance;
 
     }
 }

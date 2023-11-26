@@ -9,7 +9,7 @@ public class DrawManager : MonoBehaviour
 
     //constant in the world or all of it
     //when we can draw the next point based on the distance
-    public const float RESOLUTION = 0.1f;
+    public const float minDistance = 0.1f;
 
     //getting the liner code and being drawn
     private Liner _currentLine;

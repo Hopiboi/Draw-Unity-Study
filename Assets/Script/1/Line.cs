@@ -36,17 +36,14 @@ public class Line : MonoBehaviour
     //Creating points
     public void SetPoint(Vector2 point)
     {
-        //Lists
+        //Adding the point in points arrray
         points.Add(point);
 
-        //How many points we have
+        //How many points we have and also where are they
         lineRenderer.positionCount = points.Count;
 
-        //Where they are
+        //New position of this
         lineRenderer.SetPosition(points.Count - 1 , point);
-
-
-
     }
 
 
